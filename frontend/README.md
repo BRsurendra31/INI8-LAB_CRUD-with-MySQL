@@ -1,70 +1,69 @@
-# Getting Started with Create React App
+# Backend Registration System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a backend registration system built using Node.js, Express, and MySQL. It provides a simple API for user registration, allowing CRUD operations on user data.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+- Node.js (v14 or higher)
+- MySQL Server
 
-### `npm start`
+## Installation
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+1. Clone the repository to your local machine:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+   ```bash
+   git clone https://github.com/yourusername/backend-registration-system.git
+   cd backend-registration-system
+   ```
 
-### `npm test`
+2. Install the dependencies in both backend and frontend :
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install 
+   ```
 
-### `npm run build`
+2. Design the SQL Table 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+4. Go to Backend and provide the mysql host url 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. start the server 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+    npm start
+```
 
-### `npm run eject`
+6. The server will run on `http://localhost:3000`.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+7. Now go to Fronted and run the app
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## API Endpoints
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **POST /register**
+  - Registers a new user.
+  - Request body should contain:
+    ```json
+    {
+      "name": "User Name",
+      "email": "user@example.com",
+      "dateOfBirth": "YYYY-MM-DD",
+      "phoneNumber": "1234567890"
+    }
+    ```
 
-## Learn More
+- **GET /register**
+  - Retrieves all registered users.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **PUT /register/:id**
+  - Updates a registered user by ID.
+  - Request body should contain the same fields as the registration.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- **DELETE /register/:id**
+  - Deletes a registered user by ID.
 
-### Code Splitting
+## Contributing
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions are welcome! Please feel free to submit a pull request or open an issue for any enhancements or bug fixes.
