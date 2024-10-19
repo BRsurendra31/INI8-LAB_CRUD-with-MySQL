@@ -16,7 +16,7 @@ This is a backend registration system built using Node.js, Express, and MySQL. I
    cd backend-registration-system
    ```
 
-2. Install the dependencies in both backend and frontend :
+2. Install the dependencies :
 
    ```bash
    npm install 
@@ -24,7 +24,7 @@ This is a backend registration system built using Node.js, Express, and MySQL. I
 
 2. Design the SQL Table 
 
-4. Go to Backend and provide the mysql host url 
+4.provide the mysql host url 
 
 5. start the server 
 
@@ -34,12 +34,21 @@ This is a backend registration system built using Node.js, Express, and MySQL. I
 
 6. The server will run on `http://localhost:3000`.
 
-7. Now go to Fronted and run the app
+7. Now go to Fronted
+
+   ```bash
+   cd frontend
+   ```
+8. Install the dependencies :
 
 ```bash
-npm start
+npm install
 ```
-
+9. Run app
+    ```
+    npm start
+    ```
+    
 ## API Endpoints
 
 - **POST /register**
